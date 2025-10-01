@@ -4,15 +4,25 @@ import CallToAction from "@/components/CTA-Section";
 import Footer from "@/components/FooterSection";
 import Industries from "@/components/IndustriesSection"
 import Services from "@/components/ServicesSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import Contact from "@/components/ContactSection";
+import HeroSection from "@/components/HeroSection";
+import Navbar from "@/components/Navbar";
+import IndustriesSection from "@/components/IndustriesSection";
+import ProjectsSection from "@/components/ProjectsSection";
 export default function Home() {
   return (
     <div>
+      <Navbar/>
+      <HeroSection/>
       <Industries/>
       <AddOns/>
       <Footer/>
       <Services/>
       <Commitments/>
       <CallToAction/>
+      <TestimonialsSection/>
+      <Contact/>
     </div>
   );
 }
