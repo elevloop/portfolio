@@ -1,8 +1,11 @@
-import Industries from "@/components/IndustriesSection"
+import IndustriesSection from "@/components/IndustriesSection";
+import ProjectsSection from "@/components/ProjectsSection";
+
 export default function Home() {
   return (
     <div>
-      <Industries/>
+      <IndustriesSection/>
+      <ProjectsSection/>
     </div>
   );
 }
