@@ -1,3 +1,4 @@
+"use client"
 import { ArrowRight, Rocket } from 'lucide-react';
 
 const CallToAction = () => {
@@ -22,7 +23,7 @@ const CallToAction = () => {
           <p className="text-xl text-blue-100 mb-10 leading-relaxed">
             Join 150+ companies that trust us to deliver innovative solutions that drive real results.
           </p>
-          <div className='flex '>
+          <div className='flex gap-40 '>
           <button 
             onClick={scrollToContact}
             className="bg-white text-blue-600 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-all duration-200 inline-flex items-center shadow-lg hover:shadow-xl group"

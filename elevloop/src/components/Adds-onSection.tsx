@@ -1,3 +1,4 @@
+"use-client"
 import { Zap, Clock, Shield, Headphones } from 'lucide-react';
 
 const AddOns = () => {
