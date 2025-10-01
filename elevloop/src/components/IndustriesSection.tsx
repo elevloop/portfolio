@@ -1,13 +1,57 @@
-import {industries} from "../data/industries"
+"use client";
 
+import { Building2, ShoppingCart, Heart, GraduationCap, Car, Home, Landmark, Gamepad2 } from 'lucide-react';
 
 const IndustriesSection = () => {
+  const industries = [
+    {
+      icon: Building2,
+      title: "Enterprise & SaaS",
+      description: "Scalable solutions for growing businesses and software companies."
+    },
+    {
+      icon: ShoppingCart,
+      title: "E-commerce & Retail",
+      description: "Digital commerce platforms that drive sales and customer engagement."
+    },
+    {
+      icon: Heart,
+      title: "Healthcare",
+      description: "Compliant healthcare technology solutions for better patient care."
+    },
+    {
+      icon: GraduationCap,
+      title: "Education",
+      description: "Learning management systems and educational technology platforms."
+    },
+    {
+      icon: Car,
+      title: "Automotive",
+      description: "Connected vehicle solutions and automotive industry digitization."
+    },
+    {
+      icon: Home,
+      title: "Real Estate",
+      description: "Property management and real estate technology solutions."
+    },
+    {
+      icon: Landmark,
+      title: "Financial Services",
+      description: "Secure fintech solutions and banking technology platforms."
+    },
+    {
+      icon: Gamepad2,
+      title: "Entertainment",
+      description: "Gaming platforms and entertainment industry digital solutions."
+    }
+  ];
+
   return (
     <section id="industries" className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Industries We Serve
+            <span className='text-primary'>Industries</span> We Serve
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Delivering specialized solutions across diverse industries with deep domain expertise
@@ -20,13 +64,13 @@ const IndustriesSection = () => {
             return (
               <div 
                 key={index}
-                className="bg-gray-50 p-6 rounded-xl hover:bg-blue-50 transition-all duration-300 group cursor-pointer border hover:border-blue-200"
+                className="bg-gray-50 p-6 rounded-xl hover:bg-primary/5 transition-all duration-300 group cursor-pointer border hover:border-primary"
               >
-                <div className="bg-white p-3 rounded-lg w-fit mb-4 group-hover:bg-blue-600 transition-colors duration-300 shadow-sm">
-                  <IconComponent className="w-6 h-6 text-blue-600 group-hover:text-white" />
+                <div className="bg-white p-3 rounded-lg w-fit mb-4 group-hover:bg-primary transition-colors duration-300 shadow-sm">
+                  <IconComponent className="w-6 h-6 text-primary group-hover:text-white" />
                 </div>
                 
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-900">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary">
                   {industry.title}
                 </h3>
                 
