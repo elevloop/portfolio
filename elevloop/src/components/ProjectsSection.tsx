@@ -97,7 +97,7 @@ const ProjectsSection = () => {
               </div>
               
               <div className="p-6">
-                <div className="text-blue-600 font-medium text-sm mb-2">{project.type}</div>
+                <div className="text-accent font-medium text-sm mb-2">{project.type}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.name}</h3>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                 
@@ -110,7 +110,7 @@ const ProjectsSection = () => {
                     const IconComponent = metric.icon;
                     return (
                       <div key={metricIndex} className="text-center">
-                        <IconComponent className="w-5 h-5 text-blue-600 mx-auto mb-1" />
+                        <IconComponent className="w-5 h-5 text-accent mx-auto mb-1" />
                         <div className="text-lg font-bold text-gray-900">{metric.value}</div>
                         <div className="text-xs text-gray-600">{metric.label}</div>
                       </div>
@@ -118,7 +118,7 @@ const ProjectsSection = () => {
                   })}
                 </div>
 
-                <button className="w-full bg-gray-50 text-gray-700 py-2 px-4 rounded-lg hover:bg-blue-50 hover:text-blue-700 transition-colors duration-200 flex items-center justify-center group">
+                <button className="w-full bg-gray-50 text-gray-700 py-2 px-4 rounded-lg hover:bg-primary/20 cursor-pointer hover:text-primary transition-colors duration-200 flex items-center justify-center group">
                   View Details
                   <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>

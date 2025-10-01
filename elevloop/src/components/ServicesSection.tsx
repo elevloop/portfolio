@@ -12,7 +12,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Services
+            Our <span className="text-primary">Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive technology solutions designed to elevate your business to new heights
@@ -28,8 +28,8 @@ const Services = () => {
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group"
               >
                 <div className="flex items-center mb-6">
-                  <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-blue-600 transition-colors duration-300">
-                    <IconComponent className="w-6 h-6 text-blue-600 group-hover:text-white" />
+                  <div className="bg-primary/20 p-3 rounded-lg group-hover:bg-primary transition-colors duration-300">
+                    <IconComponent className="w-6 h-6 text-primary group-hover:text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 ml-4">{service.title}</h3>
                 </div>
@@ -41,13 +41,13 @@ const Services = () => {
                 <ul className="space-y-2 mb-8">
                   {service.subServices.map((subService, subIndex) => (
                     <li key={subIndex} className="flex items-center text-gray-600">
-                      <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></div>
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                       {subService}
                     </li>
                   ))}
                 </ul>
 
-                <button className="text-blue-600 font-medium flex items-center group-hover:text-blue-700 transition-colors duration-200">
+                <button className="text-primary font-medium flex items-center group-hover:text-primary transition-colors duration-200">
                   Learn More
                   <ChevronRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>

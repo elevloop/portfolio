@@ -8,21 +8,21 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import Contact from "@/components/ContactSection";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
-import IndustriesSection from "@/components/IndustriesSection";
 import ProjectsSection from "@/components/ProjectsSection";
 export default function Home() {
   return (
     <div>
       <Navbar/>
       <HeroSection/>
-      <Industries/>
-      <AddOns/>
-      <Footer/>
       <Services/>
+      <Industries/>
+      <ProjectsSection/>
       <Commitments/>
       <CallToAction/>
       <TestimonialsSection/>
+      <AddOns/>
       <Contact/>
+      <Footer/>
     </div>
   );
 }

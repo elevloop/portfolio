@@ -46,12 +46,12 @@ const AddOns = () => {
             const IconComponent = addOn.icon;
             return (
               <div key={index} className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 text-center group">
-                <div className="bg-blue-100 p-4 rounded-full w-fit mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
-                  <IconComponent className="w-8 h-8 text-blue-600 group-hover:text-white" />
+                <div className="bg-primary/20 p-4 rounded-full w-fit mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
+                  <IconComponent className="w-8 h-8 text-primary group-hover:text-white" />
                 </div>
                 
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{addOn.name}</h3>
-                <div className="text-blue-600 font-medium text-sm mb-4">{addOn.duration}</div>
+                <div className="text-primary font-medium text-sm mb-4">{addOn.duration}</div>
                 <p className="text-gray-600 text-sm leading-relaxed">{addOn.description}</p>
               </div>
             );

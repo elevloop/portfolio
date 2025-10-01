@@ -12,7 +12,7 @@ const CallToAction = () => {
   return (
     <>
       {/* First CTA Section */}
-      <section className="bg-blue-600 py-20">
+      <section className="bg-accent py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center mb-6">
             <Rocket className="w-12 h-12 text-white" />
@@ -26,7 +26,7 @@ const CallToAction = () => {
           <div className='flex gap-40 '>
           <button 
             onClick={scrollToContact}
-            className="bg-white text-blue-600 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-all duration-200 inline-flex items-center shadow-lg hover:shadow-xl group"
+            className="bg-white text-primary cursor-pointer px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-all duration-200 inline-flex items-center shadow-lg hover:shadow-xl group"
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -34,7 +34,7 @@ const CallToAction = () => {
 
           <button 
             onClick={scrollToContact}
-            className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-200 inline-flex items-center group"
+            className="border-2 border-primary cursor-pointer text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200 inline-flex items-center group"
           >
             Start Your Project
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />

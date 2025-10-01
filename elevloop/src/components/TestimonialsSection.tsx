@@ -49,10 +49,10 @@ const TestimonialsSection = () => {
             const IconComponent = stat.icon;
             return (
               <div key={index} className="text-center">
-                <div className="bg-blue-100 p-4 rounded-full w-fit mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-blue-600" />
+                <div className="bg-primary/10 p-4 rounded-full w-fit mx-auto mb-4">
+                  <IconComponent className="w-8 h-8 text-primary" />
                 </div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             );
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
               <div className="border-t border-gray-100 pt-4">
                 <div className="font-semibold text-gray-900">{testimonial.name}</div>
                 <div className="text-gray-600 text-sm">{testimonial.role}</div>
-                <div className="text-blue-600 text-sm font-medium mt-1">
+                <div className="text-primary text-sm font-medium mt-1">
                   Project: {testimonial.project}
                 </div>
               </div>
@@ -87,9 +87,9 @@ const TestimonialsSection = () => {
         {/* Satisfaction Rate */}
         <div className="text-center mt-16 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
           <div className="flex justify-center mb-4">
-            <Award className="w-12 h-12 text-blue-600" />
+            <Award className="w-12 h-12 text-primary" />
           </div>
-          <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
+          <div className="text-3xl font-bold text-primary mb-2">100%</div>
           <div className="text-gray-700 font-medium">Client Satisfaction Rate</div>
           <p className="text-gray-600 mt-2">Every project delivered on time and exceeding expectations</p>
         </div>

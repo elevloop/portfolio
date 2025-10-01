@@ -22,12 +22,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-primary/80 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Company Info */}
           <div>
-            <div className="text-2xl font-bold text-blue-400 mb-4">ElevLoop</div>
+            <div className="text-2xl font-bold text-accent mb-4">ElevLoop</div>
             <p className="text-gray-300 leading-relaxed mb-6">
               Transforming businesses through innovative technology solutions that drive sustainable growth and competitive advantage.
             </p>
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
           <button
             onClick={scrollToTop}
-            className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors duration-200 group"
+            className="bg-accent text-white p-3 rounded-full hover:bg-accent transition-colors duration-200 group"
           >
             <ChevronUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-200" />
           </button>

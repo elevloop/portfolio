@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-2xl font-bold text-blue-600">ElevLoop</div>
+            <div className="text-2xl font-bold text-primary">ElevLoop</div>
           </div>
 
           {/* Desktop Navigation */}
@@ -38,7 +38,7 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-primary cursor-pointer px-3 py-2 text-sm font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </button>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <button 
               onClick={() => scrollToSection('#contact')}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-all duration-200 flex items-center group"
+              className="bg-accent text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-accent transition-all duration-200 flex items-center group"
             >
               Contact Us
               <ChevronRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -61,7 +61,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
+              className="text-gray-700 hover:text-primary p-2"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -84,7 +84,7 @@ const Navbar = () => {
             ))}
             <button 
               onClick={() => scrollToSection('#contact')}
-              className="bg-blue-600 text-white px-3 py-2 rounded-lg text-base font-medium hover:bg-blue-700 transition-colors duration-200 w-full mt-4"
+              className="bg-accent text-white px-3 py-2 rounded-lg text-base font-medium hover:bg-accent transition-colors duration-200 w-full mt-4"
             >
               Contact Us
             </button>
