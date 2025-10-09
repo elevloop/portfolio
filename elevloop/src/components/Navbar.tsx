@@ -1,23 +1,23 @@
 "use client";
 
-import { useState } from 'react';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { useState } from "react";
+import { Menu, X, ChevronRight } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Industries', href: '#industries' },
-    { name: 'Work', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' }
+    { name: "Home", href: "#home" },
+    { name: "Services", href: "#services" },
+    { name: "Industries", href: "#industries" },
+    { name: "Work", href: "#portfolio" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="text-2xl font-bold text-primary">ElevLoop</div>
@@ -33,14 +33,15 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-center justify-center space-x-12">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-primary cursor-pointer px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="relative text-gray-700 hover:text-accent cursor-pointer py-2 text-md font-medium transition-colors duration-200 group"
                 >
                   {item.name}
+                  <span className="absolute left-0 bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
                 </button>
               ))}
             </div>
@@ -48,9 +49,9 @@ const Navbar = () => {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
-            <button 
-              onClick={() => scrollToSection('#contact')}
-              className="bg-accent text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-accent transition-all duration-200 flex items-center group"
+            <button
+              onClick={() => scrollToSection("#contact")}
+              className="bg-primary cursor-pointer text-white px-6 py-2 rounded-lg text-md font-medium hover:bg-accent transition-all duration-200 flex items-center group"
             >
               Contact Us
               <ChevronRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -63,7 +64,11 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-primary p-2"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -82,8 +87,8 @@ const Navbar = () => {
                 {item.name}
               </button>
             ))}
-            <button 
-              onClick={() => scrollToSection('#contact')}
+            <button
+              onClick={() => scrollToSection("#contact")}
               className="bg-accent text-white px-3 py-2 rounded-lg text-base font-medium hover:bg-accent transition-colors duration-200 w-full mt-4"
             >
               Contact Us
