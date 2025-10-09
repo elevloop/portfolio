@@ -2,8 +2,8 @@ import { ExternalLink, TrendingUp, Clock, DollarSign } from 'lucide-react';
 
 export const projects = [
     {
-      type: "E-commerce Platform",
-      name: "RetailMax Pro",
+      type: "Portfolio",
+      name: "UET Game Studio",
       description: "Complete e-commerce solution with inventory management and analytics dashboard.",
       result: "300% increase in online sales",
       image: "https://images.pexels.com/photos/4439901/pexels-photo-4439901.jpeg?auto=compress&cs=tinysrgb&w=800",

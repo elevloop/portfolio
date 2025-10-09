@@ -1,38 +1,17 @@
 import { Star, Users, Award, TrendingUp } from 'lucide-react';
+import testimonials from '@/data/testimonials';
 
 const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO",
-      project: "E-commerce Platform",
-      message: "ElevLoop transformed our entire digital infrastructure. Their team delivered a scalable e-commerce platform that increased our sales by 300% within six months.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Founder",
-      project: "Healthcare App",
-      message: "The mobile app ElevLoop developed for us revolutionized patient care. The user experience is exceptional, and the compliance standards exceeded our expectations.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "VP of Operations",
-      project: "Enterprise Software",
-      message: "Working with ElevLoop was a game-changer. They automated our processes and delivered a custom solution that saved us 40 hours per week in manual work.",
-      rating: 5
-    }
-  ];
+
 
   const stats = [
-    { icon: Users, value: "150+", label: "Happy Clients" },
+    { icon: Users, value: "10+", label: "Happy Clients" },
     { icon: Star, value: "4.9/5", label: "Average Rating" },
     { icon: TrendingUp, value: "98%", label: "Success Rate" }
   ];
-
+// Website for development, pricing, Social Media mention in service, Tech Stack Consultation, local business in industries
   return (
-    <section id="testimonials" className="bg-gray-50 py-20">
+    <section id="testimonials" className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -60,38 +39,53 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <div className="flex mb-4">
+            <div key={index} className="bg-white p-8 rounded-2xl border border-gray-200">
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-16 h-16 rounded-xl object-cover"
+                />
+                <div className="flex-1">
+                  <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
+                  <div className="text-gray-600 text-sm">{testimonial.role}</div>
+                  <div className="text-gray-500 text-xs mt-1">{testimonial.company}</div>
+                </div>
+              </div>
+
+              <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, starIndex) => (
-                  <Star key={starIndex} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star
+                    key={starIndex}
+                    className="w-4 h-4 text-yellow-400 fill-current"
+                  />
                 ))}
               </div>
-              
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                &apot;{testimonial.message}&apot;
+
+              <p className="text-gray-700 mb-6 leading-relaxed text-base">
+                "{testimonial.message}"
               </p>
-              
-              <div className="border-t border-gray-100 pt-4">
-                <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                <div className="text-gray-600 text-sm">{testimonial.role}</div>
-                <div className="text-primary text-sm font-medium mt-1">
-                  Project: {testimonial.project}
-                </div>
+
+              <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-100 rounded-full">
+                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mr-2"></div>
+                <span className="text-xs font-semibold text-blue-700">
+                  {testimonial.project}
+                </span>
               </div>
             </div>
           ))}
         </div>
 
         {/* Satisfaction Rate */}
-        <div className="text-center mt-16 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+        <div className="text-center mt-16 bg-primary p-8 rounded-xl shadow-sm border border-gray-100">
           <div className="flex justify-center mb-4">
-            <Award className="w-12 h-12 text-primary" />
+            <Award className="w-12 h-12 text-accent" />
           </div>
-          <div className="text-3xl font-bold text-primary mb-2">100%</div>
-          <div className="text-gray-700 font-medium">Client Satisfaction Rate</div>
-          <p className="text-gray-600 mt-2">Every project delivered on time and exceeding expectations</p>
+          <div className="text-3xl font-bold text-accent mb-2">100%</div>
+          <div className="text-gray-100 font-medium">Client Satisfaction Rate</div>
+          <p className="text-gray-300 mt-2">Every project delivered on time and exceeding expectations</p>
         </div>
       </div>
     </section>

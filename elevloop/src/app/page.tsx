@@ -18,7 +18,7 @@ export default function Home() {
       <Industries/>
       <ProjectsSection/>
       <Commitments/>
-      <CallToAction/>
+      {/* <CallToAction/> */}
       <TestimonialsSection/>
       <AddOns/>
       <Contact/>

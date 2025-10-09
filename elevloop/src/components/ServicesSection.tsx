@@ -8,7 +8,7 @@ const Services = () => {
   
 
   return (
-    <section id="services" className="bg-gray-50 py-20">
+    <section id="services" className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -28,8 +28,8 @@ const Services = () => {
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group"
               >
                 <div className="flex items-center mb-6">
-                  <div className="bg-primary/20 p-3 rounded-lg group-hover:bg-primary transition-colors duration-300">
-                    <IconComponent className="w-6 h-6 text-primary group-hover:text-white" />
+                  <div className="bg-accent/20 p-3 rounded-lg group-hover:bg-accent transition-colors duration-300">
+                    <IconComponent className="w-6 h-6 text-accent group-hover:text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 ml-4">{service.title}</h3>
                 </div>

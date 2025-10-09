@@ -10,7 +10,7 @@ const Commitments = () => {
             Our <span className="text-primary">Commitments</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your success is our priority. Here&apos;s what you can expect when working with us.
+            At ElevLoop, we don’t just deliver projects — we build lasting partnerships grounded in clarity, quality, and commitment.
           </p>
         </div>
 
