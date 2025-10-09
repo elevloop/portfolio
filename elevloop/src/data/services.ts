@@ -10,7 +10,7 @@ import {
 export const services = [
   {
     icon: Code,
-    title: "Software & Web Development",
+    title: "Website for Business",
     description:
       "We elevate your digital presence with scalable, high-performance solutions.",
     subServices: [

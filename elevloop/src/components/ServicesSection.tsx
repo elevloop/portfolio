@@ -8,7 +8,7 @@ const Services = () => {
   
 
   return (
-    <section id="services" className="bg-white py-20">
+    <section id="services" className="bg-white py-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -47,9 +47,10 @@ const Services = () => {
                   ))}
                 </ul>
 
-                <button className="text-primary font-medium flex items-center group-hover:text-primary transition-colors duration-200">
-                  Learn More
-                  <ChevronRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                <button className="cursor-pointer relative text-primary px-6 py-2.5 rounded-lg font-medium flex items-center overflow-hidden transition-all duration-300 group-hover:pl-7 group-hover:pr-5">
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Learn More</span>
+                  <ChevronRight className="ml-1 w-4 h-4 relative z-10 transition-all duration-300 group-hover:translate-x-1 group-hover:text-white" />
+                  <div className="absolute inset-0 bg-primary transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
                 </button>
               </div>
             );

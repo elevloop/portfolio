@@ -51,7 +51,7 @@ const IndustriesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className='text-primary'>Industries</span> We Serve
+            <span className='text-accent'>Market</span> <span className='text-primary'>Scope</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Delivering specialized solutions across diverse industries with deep domain expertise
@@ -64,13 +64,13 @@ const IndustriesSection = () => {
             return (
               <div 
                 key={index}
-                className="bg-gray-50 p-6 rounded-xl hover:bg-primary/5 transition-all duration-300 group cursor-pointer border hover:border-primary"
+                className="bg-gray-50 p-6 rounded-xl hover:bg-accent/5 transition-all duration-300 group cursor-pointer border hover:border-accent"
               >
-                <div className="bg-white p-3 rounded-lg w-fit mb-4 group-hover:bg-primary transition-colors duration-300 shadow-sm">
-                  <IconComponent className="w-6 h-6 text-primary group-hover:text-white" />
+                <div className="bg-white p-3 rounded-lg w-fit mb-4 group-hover:bg-accent transition-colors duration-300 shadow-sm">
+                  <IconComponent className="w-6 h-6 text-accent group-hover:text-white" />
                 </div>
                 
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-accent">
                   {industry.title}
                 </h3>
                 
