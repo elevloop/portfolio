@@ -18,35 +18,37 @@ export const services = [
       "Appointment Web App",
       "E-commerce App",
       "Resturant Booking App",
+      "Website for any of your business",
     ],
   },
   {
     icon: Smartphone,
-    title: "Mobile App Development",
+    title: "Mobile App for Business",
     description:
       "We craft high-performing mobile experiences, keeping you in the loop from idea to launch.",
     subServices: [
-      "iOS Development",
-      "Android Development",
-      "Cross Platform Development",
+      "Anroid & iOS Development",
+      "Mobile app for your business",
       "App Maintainenece & Support",
+      "Cross Platform Development",
     ],
   },
   {
     icon: BarChart3,
-    title: "UI/UX Design",
+    title: "Web & App Design",
     description:
       "We design digital experiences that elevate engagement and clarity.",
     subServices: [
+      "Interface Design (Web & Mobile)",
+      "Animated Mobile & Web App",
       "Product Research & Wireframing",
       "UX Strategy & Prototyping",
-      "Interface Design (Web & Mobile)",
       "Design Systems & Brand Identity",
     ],
   },
   {
     icon: Zap,
-    title: "Branding & Creative",
+    title: "Logo & Post Design",
     description:
       "We elevate your brand with strategy, storytelling, and stunning visuals.",
     subServices: [

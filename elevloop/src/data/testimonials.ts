@@ -1,4 +1,6 @@
-  const testimonials = [
+import { Testimonial } from '@/types/testimonial';
+
+const testimonials: Testimonial[] = [
     {
       name: "Sarah Johnson",
       role: "CTO",
@@ -9,6 +11,24 @@
       rating: 5
     },
     {
+      name: "Michael Chen",
+      role: "Founder",
+      company: "HealthFirst",
+      project: "Healthcare App",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      message: "The mobile app ElevLoop developed for us revolutionized patient care. The user experience is exceptional, and the compliance standards exceeded our expectations.",
+      rating: 5
+    },
+        {
+      name: "Michael Chen",
+      role: "Founder",
+      company: "HealthFirst",
+      project: "Healthcare App",
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      message: "The mobile app ElevLoop developed for us revolutionized patient care. The user experience is exceptional, and the compliance standards exceeded our expectations.",
+      rating: 5
+    },
+        {
       name: "Michael Chen",
       role: "Founder",
       company: "HealthFirst",
