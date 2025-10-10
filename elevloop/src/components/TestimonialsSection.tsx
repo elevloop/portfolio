@@ -1,9 +1,10 @@
 "use client";
 
-import { Star, Users, Award, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
+import { Star, Users, TrendingUp } from 'lucide-react';
 import testimonials from '@/data/testimonials';
 import { useRef, useState, useCallback, useEffect } from 'react';
-import { Testimonial } from '@/types/testimonial';
+
 
 interface StatItem {
   icon: React.ElementType;
@@ -182,7 +183,7 @@ const TestimonialsSection = () => {
                     </svg>
                   </div>
                   <p className="text-gray-600 text-base leading-relaxed mb-6">
-                    "{testimonial.message}"
+                    "                    &quot;{testimonial.message}&quot;"
                   </p>
                 </div>
               </div>
@@ -190,10 +191,12 @@ const TestimonialsSection = () => {
               {/* Footer */}
               <div className="px-6 py-4 border-t border-gray-100">
                 <div className="flex items-center gap-4">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-xl object-cover ring-2 ring-accent/10 group-hover:ring-accent/20 transition-all duration-300"
+                    width={48}
+                    height={48}
+                    className="rounded-xl object-cover ring-2 ring-accent/10 group-hover:ring-accent/20 transition-all duration-300"
                   />
                   <div>
                     <div className="font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">

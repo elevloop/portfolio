@@ -5,7 +5,6 @@ import {
   BarChart3,
   Shield,
   Zap,
-  ChevronRight,
 } from "lucide-react";
 export const services = [
   {

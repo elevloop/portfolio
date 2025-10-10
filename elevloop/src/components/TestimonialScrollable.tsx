@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { Star, Users, Award, TrendingUp } from "lucide-react";
 import testimonials from "@/data/testimonials";
 
@@ -73,7 +74,7 @@ export default function TestimonialsClient() {
 
     const onPointerDown = (e: PointerEvent) => {
       // only left button for mouse
-      if ((e as any).button && (e as any).button !== 0) return;
+      if ('button' in e && e.button !== 0) return;
       isDraggingRef.current = true;
       startXRef.current = e.clientX;
       startScrollRef.current = el.scrollLeft;
@@ -82,7 +83,7 @@ export default function TestimonialsClient() {
       try {
         // set pointer capture when available
         (e.target as Element).setPointerCapture?.((e as PointerEvent).pointerId);
-      } catch (err) { /* ignore */ }
+      } catch (_) { /* ignore */ }
 
       // visual and selection lock
       el.style.cursor = "grabbing";
@@ -108,7 +109,7 @@ export default function TestimonialsClient() {
       isDraggingRef.current = false;
       try {
         (e.target as Element).releasePointerCapture?.((e as PointerEvent).pointerId);
-      } catch (err) { /* ignore */ }
+      } catch (_) { /* ignore */ }
       el.style.cursor = "grab";
       document.body.style.userSelect = "";
     };
@@ -188,7 +189,13 @@ export default function TestimonialsClient() {
               className="flex-shrink-0 bg-white p-4 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-start gap-3 mb-2">
-                <img src={t.image} alt={t.name} className="w-12 h-12 rounded-xl object-cover" />
+                <Image 
+                  src={t.image} 
+                  alt={t.name} 
+                  width={48} 
+                  height={48} 
+                  className="rounded-xl object-cover" 
+                />
                 <div>
                   <div className="font-semibold text-gray-900 text-base">{t.name}</div>
                   <div className="text-gray-600 text-xs">{t.role}</div>

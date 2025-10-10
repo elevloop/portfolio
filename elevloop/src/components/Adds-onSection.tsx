@@ -107,7 +107,7 @@ const AddOns = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Add-ons & <span className="text-primary">Extras</span>
+            <span className="text-primary">Add-ons &</span> <span className="text-accent">Extras</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Enhance your project with our specialized services and accelerated
@@ -124,7 +124,7 @@ const AddOns = () => {
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category.id
                   ? "bg-primary text-white shadow-lg shadow-primary/25"
-                  : "bg-white text-gray-600 hover:bg-gray-100"
+                  : "cursor-pointer bg-white text-gray-600 hover:bg-gray-100"
               }`}
             >
               {category.name}
@@ -142,13 +142,13 @@ const AddOns = () => {
               >
                 {/* Category Tag */}
                 <div className="absolute top-4 right-4">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                  <span className="inline-flex group-hover:bg-primary group-hover:text-white items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
                     {addOn.category}
                   </span>
                 </div>
 
-                <div className="bg-gradient-to-br from-primary/20 to-primary/10 p-4 rounded-xl w-16 h-16 mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <IconComponent className="w-8 h-8 text-primary" />
+                <div className="bg-gradient-to-br from-accent/20 to-accent/10 p-4 group-hover:bg-accent rounded-xl w-16 h-16 mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <IconComponent className="w-8 h-8 text-accent group-hover:text-white" />
                 </div>
 
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
@@ -166,14 +166,14 @@ const AddOns = () => {
 
                 {/* Price Tag */}
                 <div className="mt-auto">
-                  <div className="text-lg font-semibold text-primary">
+                  <div className="text-lg text-primary font-semibold group-hover:text-accent">
                     {addOn.startingPrice}
                   </div>
                   <div className="text-xs text-gray-500">Starting from</div>
                 </div>
 
                 {/* Hover Border Effect */}
-                <div className="absolute inset-0 border-2 border-primary/50 opacity-0 group-hover:opacity-100 rounded-xl transition-all duration-300"></div>
+                <div className="absolute inset-0 border-2 border-accent/50 opacity-0 group-hover:opacity-100 rounded-xl transition-all duration-300"></div>
               </div>
             );
           })}
